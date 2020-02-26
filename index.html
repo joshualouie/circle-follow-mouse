@@ -1,0 +1,36 @@
+
+<div class ="circle">I'm a circle</div>
+
+
+.circle {
+  
+  height: 100px;
+  width: 100px;
+  background: red;
+  border-radius: 50%;
+  
+  font-size: 2vh;
+  font-weight: bold;
+  font-family: arial;
+  color: white;
+  
+  text-align: center;
+  vertical-align: middle;
+  line-height: 100px;
+  
+  position: fixed;
+  top: calc(50vh - 50px);
+  left: calc(50vw - 50px);
+
+}
+</style>
+     
+
+<script>
+console.log(window);
+window.addEventListener("mousemove", function(event) {
+  console.log(event.clientY);
+  document.getElementsByClassName("circle")[0].style.top = (event.clientY - 50) + "px";
+   document.getElementsByClassName("circle")[0].style.left = (event.clientX - 50) + "px";
+});
+</script>
